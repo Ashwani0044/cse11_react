@@ -1,4 +1,5 @@
 import React from 'react'
+// instead of props u can write {name, age} ...it's called destructuring of props
 
 function Student(props) {
   return (

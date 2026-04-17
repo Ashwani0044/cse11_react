@@ -1,6 +1,6 @@
 import './App.css'
-import Greeting from '/src/Greeting.jsx';
-import Student from '/src/components/Student.jsx';
+import Greeting from '/src/components/Greeting.jsx';
+import Exp4 from '/src/components/Exp4.jsx';
 
 function App() {
   
@@ -8,7 +8,9 @@ function App() {
   return (
     <>
       <Greeting />
-      <Student name={'Ashwani'} age={18}/>
+      <Exp4 name={'Rahul Sharma'} course={'Computer Science'} marks={85} />
+      <Exp4 name={'Priya Singh'} course={'Mathematics'} marks={92} />
+      <Exp4 name={'Amit Kumar'} course={'Physics'} marks={78} />
     </>
   )
 }
