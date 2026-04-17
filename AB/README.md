@@ -4,3 +4,7 @@
 -> use onClick instead of onclick.
 -> iN SELF closing tags like <image src="">, in react use it like <image src=""  />.
 
+-> rfce, rafce(for arrow function)
+
+# PROPS
+->read only inputs passed by parent component
