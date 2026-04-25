@@ -1,19 +1,18 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import "./Form.css";
 
-function Form() {
+function Exp6() {
     const [formdata, setformdata] = useState({
-        name:"",
-        email:"",
-        password:"",
+        name="",
+        email="",
+        password=""
     });
     const [errors, setErrors] = useState({});
     const [success, setSuccess] = useState("");
     const [apiData, setapiData] = useState(null);
 
     useEffect(() => {
-        fetch("https://jsonplaceholder.typicode.com/posts/1")
+        fetch("")
         .then((response) => response.json())
         .then((data) => setapiData(data.title))
     }, []);
@@ -44,30 +43,16 @@ function Form() {
 
   return (
     <div className="form-container">
-      <h1>Registration Form</h1>
-      <p style={{fontSize: "15px", color:"blue"}}>
+      <h2>Registration Form</h2>
+      <p style={{fontSize: "12px"}}>
         API Title: {apiData ? apiData : "Loading..."}
       </p>
 
       <form onSubmit={handleSubmit}>
-        <div className="form">
-            <label>Name:</label>
-            <input name="name" type="text" placeholder="Name" onChange={handleChange} />
-            {errors.name && <p style={{color:"red"}}>{errors.name}</p>}
-            <label>Email:</label>
-            <input name="email" type="text" placeholder="Email" onChange={handleChange} />
-            {errors.email && <p style={{color:"red"}}>{errors.email}</p>}
-            <label>Password:</label>
-            <input name="password" type="password" placeholder="Password" onChange={handleChange} />
-            {errors.password && <p style={{color:"red"}}>{errors.password}</p>}
-            <br />
-            <button type="submit">Submit</button>
-            {success && <p style={{color:"green"}}>{success}</p>}
-        </div>    
-            
+            <input name="name" type="text" placeholder="Name" onChange={onChange} />
       </form>
     </div>
   )
 }
 
-export default Form;
+export default Exp6;
